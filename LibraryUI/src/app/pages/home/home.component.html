@@ -1,0 +1,55 @@
+<app-header></app-header>
+<div class="main-home ">
+    <div class="row ">
+        <img class="topBannerImage p-0" src="https://brpressbooks.com/wp-content/uploads/2018/09/teacher-guides-header.jpg" alt="">
+        <div class="search-container" >
+            <input class="searchBox" type="text" id="search-bar" name="search-term" placeholder="Search..." [(ngModel)]="searchValue" />
+           
+        </div>
+    </div>
+    <div *ngIf="searchValue==='' ">
+        <h3 class="mx-3 mb-0 mt-2">TOP PICKS</h3>
+        <div class="row randomSec rounded  ">
+            <app-list class="mx-4" [item]="'random'"></app-list>
+        </div>
+
+
+        <div class="row scienceFiction ms-2 p-0 ">
+            <img class="img-fluid banner rounded mt-3   "
+                src="https://th.bing.com/th/id/R.7e19b5cd6ca956609afa8dc78c3d1c44?rik=1HyHPijGIBCMsA&riu=http%3a%2f%2fmegacitycomics.co.uk%2facatalog%2favengers-banner.jpg&ehk=rh161Q4DBfHW6w%2bZkH0XsH5z1tZ1qjYj5mtYOiLyYTc%3d&risl=&pid=ImgRaw&r=0"
+                alt="">
+            <div class="col-4 ">
+                <img class="img-fluid rounded mt-4  img-fluid"
+                    src="https://i.pinimg.com/564x/2e/7a/bc/2e7abcd94b8364be75ad0903b76fda06.jpg" alt="">
+            </div>
+            <div  class="col-8 ">
+                <app-list [item]="'science-fiction'"></app-list>
+            </div>
+        </div>
+
+
+        <div class="row mt-2">
+            <img class="img-fluid rounded banner me-3"
+                src="https://www.yogamotion.com/wp-content/uploads/2015/03/BANNER-Books-V2.jpg" alt="">
+            <div class="mx-5">
+                <app-list [item]="'love'"></app-list>
+            </div>
+
+
+        </div>
+        <div class="row  mt-2">
+            <img class="img-fluid rounded me-3 banner "
+                src="https://news-cdn.softpedia.com/images/news2/New-quot-Comics-quot-Selection-in-AppStore-to-Challenge-your-Imagination-452082-2.jpg"
+                alt="">
+            <div class=" rounded mt-1 mx-5 ">
+                <app-list [item]="'random'"></app-list>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="randomSec">
+</div> -->
+    <div class="mx-5" >
+        <app-list  [searchTerm]="searchValue" ></app-list>
+    </div>
+</div>
+<app-footer></app-footer>

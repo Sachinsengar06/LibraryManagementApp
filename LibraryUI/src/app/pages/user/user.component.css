@@ -1,0 +1,118 @@
+.setting{
+    display:flex;
+    flex-direction: column;
+}
+.settingWrapper{
+    flex:9;
+    padding:20px;
+}
+.settingTitle{
+    display:flex;
+    align-items: center;
+    justify-content:space-between ;
+}
+.settingUpdateTitle{
+    font-size: 30px;
+    margin-bottom:20px;
+    color:lightcoral;
+}
+
+.settingForm{
+    display:flex;
+    flex-direction: column;
+}
+.settingPP{
+    display:flex;
+    align-items:center;
+    margin: 10px 0;
+    width: 96vw;
+    height: 200px;
+    border-radius:10px;
+    justify-content: space-between;
+}
+.userImg{
+    height:100px;
+    width: 95px;
+    border-radius: 10px;
+}
+
+.adminControl{
+    margin-top: 45px;
+    display:flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.imgDiv{
+    width: 150px;
+    margin: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 70px;
+}
+.bookImg{
+    object-fit: fill;
+    height: 100px;
+    width: 100%;
+    border-radius: 10px ;
+    border:solid black 1px;
+}
+button{
+    width: 150px;
+    height: 30px;
+    font-size: 18px;
+    padding:2px;
+    overflow: hidden;
+    color:white;
+    background-color: burlywood;
+    border-radius: 15px;
+    box-shadow: 0 0 2px 1px;
+    border:none;
+    cursor: pointer;
+    margin-bottom: 15px;
+    margin-right: 10px;
+}
+.myHead{
+    font-size: 35px;
+    color:lightcoral;
+}
+.myHeadT{
+  display: flex;
+  justify-content: center;
+}
+.dates{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h5{
+    margin-top: 10px;
+    font-size: 16px;
+    color:rgb(93, 41, 4);
+    font-family:'Josefin Sans',sans-serif;
+
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+
+button[disabled] {
+    background-color: #ccc;
+    color: #aaa;
+    cursor: not-allowed;
+  }
+
+.BorrDiv{
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.lentBook{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -1,0 +1,62 @@
+.img-container{
+    background-color: rgba(0, 0, 0, 0.025);
+    height: 95%;
+    width: 97%;
+    border-radius: 30px;
+    box-shadow: 0 0 5px 2px;
+    margin: 20px;
+    margin-top: 65px;
+
+}
+.imgAndData {
+    display: flex;
+    
+}
+.content{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button{
+    float:left;
+    margin-left:56px;
+    width:20%;
+    margin-top:20px;
+    height:30px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px;
+    border:none;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: 'Barlow', sans-serif;
+    cursor: pointer;
+}
+
+.imgDiv{
+    display: flex;
+    justify-content:left;
+    margin-left: 40px;
+}
+
+img{
+    margin-top: 20px;
+    object-fit:fill;
+    width:20Vw;
+    height: 50vh;
+    border-radius: 10px;
+}
+.title{
+    margin-left: 40px;
+    margin-top: 25px;
+    font-family: "Lora",sans-serif;
+    font-size: 22px;
+}
+.detail{
+    margin-left:100px;
+    margin-top: 20px;
+    justify-content: center;
+    font-family: "Varela",sans-serif;
+}
+.borrBook{
+    margin-right: 15px;
+}

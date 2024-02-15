@@ -1,0 +1,55 @@
+<app-header></app-header>
+<div class="setting ">
+    <div class="settingWrapper">
+        <div class="settingTitle">
+            <span class="settingUpdateTitle mt-4">Your Account</span>
+        </div>
+
+        <!-- //Profile picture -->
+        <form class="settingForm">
+            <div class="settingPP bg-info">
+                <div>
+                    <img class="userImg ms-4 " [src]=curLoggedUser.userImg alt="" />
+                    <h6 class="ms-4">Name: {{curLoggedUser.name}}</h6>
+                    <h5 class="ms-4">Token Available: {{curLoggedUser.token}}</h5>
+                </div>
+                <div class="mb-5 ">
+                    <h1 class="mb-5 d-flex ">Welcome {{curLoggedUser.name}} !</h1>
+                </div>
+                <div class="returnReq">
+                    <button class="btn " routerLink="/addBook">Add New Book</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="adminControl">
+        <div class="myHeadT">
+            <h1 class="myHead mb-5">My Collection</h1>
+        </div>
+        <div class="row book-list  ">
+            <div class="col-6 lentBook d-flex">
+                <h2>Lent Books</h2>
+                <div class="d-flex BorrDiv ">
+                    <div *ngFor="let book of lented_Books" class="m-1">
+                        <a routerLink="/updateBook/{{book.id}}"> <img class="bookImg" [src]= book.imageLink alt="" /></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lentBook col-6 d-flex  ">
+                <h2>Borrowed Books</h2>
+               <div class="d-flex BorrDiv justify-content-center mx-2">
+                <div *ngFor="let book of borrowedBooks"class="m-1" >
+                    <a><img class="bookImg" [src]= book.imageLink alt="" /></a>
+                </div>
+               </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- //footer -->
+<app-footer></app-footer>

@@ -1,0 +1,30 @@
+<app-header></app-header>
+<div class=" m-0 p-0">
+    <div class="">
+        <video class="videoBook " type="video/mp4" src="../../../assets/videofile/video2.mp4" muted loop autoplay></video>
+    </div>
+    <div class="z-1 mainBook ">
+        <div class="mt-5" >
+            <button routerLink="">Back</button>
+        </div>
+        <form #form="ngForm" (ngSubmit)="addBook()">
+            <h1>Add New Car</h1>
+                <input type="text" placeholder="ImageLink" 
+                 name="image" [(ngModel)]="addBookRequest.imageLink">
+                <input type="text" placeholder="Book Title"
+                name="title" [(ngModel)]="addBookRequest.title">
+                <input type="text" placeholder="Author Name"
+                name="author" [(ngModel)]="addBookRequest.author">
+                <input type="text" placeholder="Genre"
+                name="genre" [(ngModel)]="addBookRequest.genre">
+                <input type="text" placeholder="Rating"
+                name="Rating" [(ngModel)]="addBookRequest.rating">
+                <textarea class="textareaBook" name="description" placeholder="Description" 
+                 [(ngModel)]="addBookRequest.description">
+                </textarea>
+                <div class="btnBook">
+                    <button type="submit">Add</button>
+                </div>
+        </form>
+    </div>
+</div>

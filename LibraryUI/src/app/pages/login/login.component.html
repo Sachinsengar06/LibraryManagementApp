@@ -1,0 +1,61 @@
+<app-header></app-header>
+<div class="">
+  <div class="imgDiv">
+    <img src="https://th.bing.com/th/id/OIP.iC-NYnD9g9pSKnulIBmcGgHaD8?w=1920&h=1024&rs=1&pid=ImgDetMain" alt="">
+  </div>
+
+  <!--form -->
+  <!-- <form [formGroup]="loginForm" class="form" (ngSubmit)="onSubmit()">
+        <h1>Login</h1>
+        <div>
+            <i class="inputIcon fa-solid fa-user"></i>
+            <input type="text" id="email" formControlName="email" placeholder="Username" >
+
+            <!--validation 
+            <div class="validation" *ngIf="(Email.errors?.['required'] && (Email.dirty || Email.touched))">Email is Required</div>
+            <div class="validation" *ngIf="Email.hasError('email')" >Email is Invalid</div>
+        </div>
+        <div>
+            <i class="inputIcon fa-solid fa-lock"></i>
+            <input type="password" name="password" formControlName="password" placeholder="password" >
+            <div class="validation" *ngIf="(PWD.errors?.['required'] && (PWD.dirty || PWD.touched))">Password is Required</div>
+
+        </div>
+        
+        <button type="submit"  [disabled]="loginForm.invalid" >Login</button>
+    </form> -->
+
+  <!-- login.component.html -->
+  <form [formGroup]="loginForm" class="form" (ngSubmit)="onSubmit()">
+    <div>
+      <i class="inputIcon fa-solid fa-user"></i>
+      <input type="text" id="email" formControlName="email" placeholder="example@email.com">
+
+      <div class="validation"
+        *ngIf="loginForm.get('email')?.hasError('required') && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)">
+        Email is required.
+      </div>
+
+      <div class="validation"
+        *ngIf="loginForm.get('email')?.hasError('email') && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)">
+        Invalid email format.
+      </div>
+    </div>
+    <!-- <input type="text" formControlName="email"> -->
+
+    <div>
+      <i class="inputIcon fa-solid fa-lock"></i>
+      <input type="password" name="password" formControlName="password" placeholder="password" >
+
+      <div class="validation"
+      *ngIf="loginForm.get('password')?.hasError('required') && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)">
+      Password is required.
+    </div>
+    
+    <div class="validation"
+      *ngIf="loginForm.get('password')?.hasError('minlength') && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)">
+      Password must be at least 6 characters long.
+    </div>
+  </div>
+    <button type="submit">Login</button>
+  </form>

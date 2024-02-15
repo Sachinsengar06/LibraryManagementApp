@@ -1,0 +1,31 @@
+
+<app-header></app-header>
+<div class="updateBook">
+    <div >
+        <video class="position-relative" type="video/mp4" src="../../../assets/videofile/video2.mp4" muted loop autoplay></video>
+    </div>
+    <div class="position-absolute">
+        <div class="mt-5">
+            <button routerLink="">Back</button>
+        </div>
+        <form  class="update-form" #form="ngForm" >
+            <h1 class=".h1-update">update Book</h1>
+                <input class="input-update" type="text" placeholder="ImageLink" 
+                 name="image" [(ngModel)]="BookDetail.imageLink">
+                <input class="input-update" type="text" placeholder="Book Title"
+                name="title" [(ngModel)]="BookDetail.title">
+                <input class="input-update" type="text" placeholder="Author Name"
+                name="author" [(ngModel)]="BookDetail.author">
+                <input class="input-update" type="text" placeholder="Genre"
+                name="genre" [(ngModel)]="BookDetail.genre">
+                <input class="input-update" type="text" placeholder="Rating"
+                name="Rating" [(ngModel)]="BookDetail.rating">
+                <textarea class="textarea-update" name="description" placeholder="Description" 
+                 [(ngModel)]="BookDetail.description">
+                </textarea>
+                <div class="btn-update">
+                    <button (click)="updateBook()" class="button-update" type="button" routerLink="">Update</button>
+                </div>
+        </form>
+    </div>
+</div>

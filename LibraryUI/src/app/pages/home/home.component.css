@@ -1,0 +1,39 @@
+
+.bannerImg{
+    border-radius: 10px;
+    object-fit: contain;
+    padding: 0px;
+}
+.randomSec{
+    width: 97vw;
+    background-color: rgb(0,0,0,.04);
+    margin-left: 19px;
+   
+}
+.comicSec{
+    border-radius: 15px;
+    width: 97vw;
+}
+.banner{
+    padding: 0;
+    width: 97vw;
+    margin:auto;
+    border-radius: 10px;
+    height: 250px;
+}
+.topBannerImage{
+    position:relative;
+}
+.search-container{
+    position: absolute;
+    top:80px;
+    left:900px;
+}
+.searchBox{
+    outline:none;
+    border-radius: 10px;
+    border:none;
+    height: 29px;
+    padding-left: 8px;
+}
+

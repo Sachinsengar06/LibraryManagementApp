@@ -1,0 +1,57 @@
+<div class="loginContainer  ">
+
+  <div class="topLeft mx-1">
+
+    <div class="topMostRight">
+      <a class=" me-4 " data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+        <i class="topIcon  fa-solid fa-bars"></i>
+      </a>
+
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul >
+            <li><a class="link" routerLink="/updateBook/{{book}}">Update Book</a></li>
+            <li><a class="link" href="#">contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <a href="https://www.facebook.com/"> <i class="topIcon fa-brands fa-square-facebook"></i></a>
+    <a href="https://www.instagram.com/"> <i class="topIcon fa-brands fa-x-twitter"></i></a>
+    <a href="https://in.pinterest.com/search/pins/?q=car&rs=typed"><i class="topIcon fa-brands fa-pinterest"></i></a>
+    <a href="https://twitter.com/x"><i class="topIcon fa-brands fa-instagram"></i></a>
+  </div>
+
+  <div class="topCenter ">
+    <ul class="topList">
+      <li><a class="link" routerLink="/">Home</a></li>
+      <li><a class="link" routerLink="/about">About</a></li>
+      <li><a class="link" routerLink="#">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="topRight">
+    <div *ngIf="(!isAuthenticated)">
+      <a routerLink="/login"  class="login link mx-2">Login</a>
+    </div>
+    <div *ngIf="(isAuthenticated)">
+      <a routerLink="/login" class="login link me-3" (click)="logout()">LogOut</a>
+    </div>
+    
+
+
+    <!-- to show the my collection page of individual entity -->
+    <div *ngIf="(isAuthenticated)">
+      <a routerLink="/user"><img class="topImg me-2"
+          [src]=userData.userImg alt="" /></a>
+    </div>
+
+
+  </div>
+
+
+</div>

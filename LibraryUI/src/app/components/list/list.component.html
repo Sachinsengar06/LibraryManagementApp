@@ -1,0 +1,45 @@
+<div  class="mainPost">
+    <div  class="posts" *ngFor="let books of books" >
+        <a class="link" routerLink="/detail/{{books.id}}">
+            
+            <div class="post ms-4 p-1 my-3">
+                <div>
+                    <img [src]="books.imageLink" alt="i">
+                </div>
+                <div class="detail d-flex ">
+                    <div class=" " *ngFor="let x of getColorStarArray(books.rating)"><i class="Colorstar fs-6  fa-solid fa-star"></i></div>
+                    <div class="" *ngFor="let x of getStarArray(books.rating)"><i class="star fs-6  fa-regular fa-star"></i></div>
+                    <div>
+                        <p *ngIf="books.isBookAvailable" style="margin-left: 8px;" class=" mt-2 status">Available</p>
+                        <p *ngIf="!books.isBookAvailable" class=" status">Not Available</p>
+                    </div>
+                   
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+<!-- <div *ngIf="isSearch" class="mainPost">
+    <div  class="posts" *ngFor="let post of posts" >
+        <a routerLink="/detail/{{post.id}}">
+            
+            <div class="post">
+                <div>
+                    <img [src]="post.carImage" alt="i">
+                    <script>
+                        console.log(post.price);
+                    </script>
+                </div>
+                <div class="postTitle">
+                    <h2>{{post.title}}</h2>
+                </div>
+                <div class="detail">
+                    <h4>Rented Price:{{post.price}}</h4>
+                    <h4>Available</h4>
+                </div>
+            </div>
+        </a>
+    </div>
+</div> -->
+
