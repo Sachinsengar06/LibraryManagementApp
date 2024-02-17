@@ -2,13 +2,13 @@
 A lightweight library management system built in .NET 5.0 with Entity Framework Core.
 Enables library administrators to manage Library Books with basic functionality.
 
-##This application consists of:
-- Template pages with Angular 16 and TypeScript
-- RESTful API Backend using ASP.NET Core 7 Web API
-- Database using Entity Framework Core
-- Authentication/Authorization based Jwt Token
-- API Documentation using Swagger
-- Angular CLI for managing client-side libraries
+## This application consists of:
+   - Template pages with Angular 16 and TypeScript
+   - RESTful API Backend using ASP.NET Core 7 Web API
+   - Database using Entity Framework Core
+   - Authentication/Authorization based Jwt Token
+   - API Documentation using Swagger
+   - Angular CLI for managing client-side libraries
 
 ## Installation Notes
    -When creating a new project please wait for all dependencies to be restored; "dotnet restore" 
